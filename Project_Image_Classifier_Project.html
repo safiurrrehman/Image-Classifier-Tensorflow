@@ -13,7 +13,7 @@
     /*!
 *
 * Twitter Bootstrap
-*
+* for making effective bootstrap illustrations
 */
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
@@ -9129,15 +9129,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -12519,7 +12519,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -13018,7 +13018,7 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
-    body[data-notebook-name] > #header #header-container:not(.show-panel), /* body has data-notebook-name attribute when 
+    body[data-notebook-name] > #header #header-container:not(.show-panel), /* body has data-notebook-name attribute when
 a notebook is open. this rule won't be applied when the notebook is not open (in 404 view for example) */
 body[data-notebook-name] #menubar-container #maintoolbar:not(.show-panel),
 body[data-notebook-name] #menubar-container ul.navbar-nav:not(.show-panel) {
@@ -13052,14 +13052,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -13271,7 +13271,7 @@ The keys of dataset are: [&#39;test&#39;, &#39;train&#39;, &#39;validation&#39;]
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span>
 </pre></div>
 
     </div>
@@ -13683,11 +13683,11 @@ height=263
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Model: &#34;sequential&#34;
 _________________________________________________________________
-Layer (type)                 Output Shape              Param #   
+Layer (type)                 Output Shape              Param #
 =================================================================
-keras_layer (KerasLayer)     (None, 1280)              2257984   
+keras_layer (KerasLayer)     (None, 1280)              2257984
 _________________________________________________________________
-dense (Dense)                (None, 102)               130662    
+dense (Dense)                (None, 102)               130662
 =================================================================
 Total params: 2,388,646
 Trainable params: 130,662
@@ -13943,11 +13943,11 @@ Accuracy on the TEST Set: 75.378%
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Model: &#34;sequential&#34;
 _________________________________________________________________
-Layer (type)                 Output Shape              Param #   
+Layer (type)                 Output Shape              Param #
 =================================================================
-keras_layer (KerasLayer)     (None, 1280)              2257984   
+keras_layer (KerasLayer)     (None, 1280)              2257984
 _________________________________________________________________
-dense (Dense)                (None, 102)               130662    
+dense (Dense)                (None, 102)               130662
 =================================================================
 Total params: 2,388,646
 Trainable params: 130,662
@@ -13995,7 +13995,7 @@ _________________________________________________________________
     <span class="n">image_size</span> <span class="o">=</span> <span class="mi">224</span>
     <span class="n">image</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">cast</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
     <span class="n">image</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="p">(</span><span class="n">image_size</span><span class="p">,</span> <span class="n">image_size</span><span class="p">))</span>
-    <span class="n">image</span> <span class="o">/=</span> <span class="mi">255</span> 
+    <span class="n">image</span> <span class="o">/=</span> <span class="mi">255</span>
     <span class="n">image</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">image</span>
 </pre></div>
@@ -14101,7 +14101,7 @@ height=422
 <span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
 <span class="n">image_size</span> <span class="o">=</span> <span class="mi">224</span>
 <span class="n">image_path</span> <span class="o">=</span> <span class="s1">&#39;./test_images/hard-leaved_pocket_orchid.jpg&#39;</span>
-<span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">top_k</span><span class="p">):</span> 
+<span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">top_k</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">image</span><span class="p">))</span>
     <span class="n">image</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">image</span><span class="p">))</span>
@@ -14115,11 +14115,11 @@ height=422
     <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">image</span><span class="p">))</span>
     <span class="n">image</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span>
     <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">image</span><span class="p">),</span> <span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-    
+
     <span class="n">image</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">image</span><span class="p">),</span> <span class="n">image</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-    
-    
+
+
     <span class="n">ps</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">image</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="c1">#ps is a list of lists, we have only one, we lelect that one</span>
     <span class="c1">#print(model.predict(image).shape)</span>
     <span class="c1">#print(model.predict(image))</span>
@@ -14128,7 +14128,7 @@ height=422
     <span class="n">probabilities</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">ps</span><span class="p">)[</span><span class="o">-</span><span class="n">top_k</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">ps</span><span class="p">)]</span>
     <span class="n">prbabilities</span> <span class="o">=</span> <span class="n">probabilities</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">prbabilities</span><span class="p">)</span>
-    <span class="n">classes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argpartition</span><span class="p">(</span><span class="n">ps</span><span class="p">,</span> <span class="o">-</span><span class="n">top_k</span><span class="p">)[</span><span class="o">-</span><span class="n">top_k</span><span class="p">:]</span> 
+    <span class="n">classes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argpartition</span><span class="p">(</span><span class="n">ps</span><span class="p">,</span> <span class="o">-</span><span class="n">top_k</span><span class="p">)[</span><span class="o">-</span><span class="n">top_k</span><span class="p">:]</span>
     <span class="n">classes</span> <span class="o">=</span> <span class="n">classes</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
     <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="n">class_names</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">(</span><span class="n">classes</span><span class="p">)]</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">names</span><span class="p">)</span>
@@ -14301,7 +14301,7 @@ height=591
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span>
 </pre></div>
 
     </div>
@@ -14313,7 +14313,7 @@ height=591
   </div>
 </body>
 
- 
+
 
 
 </html>
