@@ -52,6 +52,8 @@ def map_data():
     with open('label_map.json', 'r') as f:
     class_names = json.load(f)
 
+# Loading the model
+
 model = "safi.h5"
 def load_model():
     loaded_model = tf.keras.models.load_model(model, custom_objects={'KerasLayer':hub.KerasLayer}
