@@ -41,6 +41,7 @@ def active_session(delay=DELAY, interval=INTERVAL):
         signal.signal(signal.SIGALRM, original_handler)
         signal.setitimer(signal.ITIMER_REAL, 0)
 
+#Keeping the workspace alive
 
 def keep_awake(iterable, delay=DELAY, interval=INTERVAL):
     """
