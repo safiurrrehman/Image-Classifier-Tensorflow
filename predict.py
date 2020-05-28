@@ -27,7 +27,7 @@ def parse_args():
 def load_split_data():
     #load oxford flower dataset using tensorflow_datasets
     dataset = tfds.load('oxford_flowers102', shuffle_files=True, as_supervised = True, with_info = False)
-    #split dataset
+    #split datase
     training_set, test_set, validation_set = dataset['train'], dataset['test'], dataset['validation']
     num_training_examples = dataset_info.splits['train'].num_examples
     return training_set, test_set, valid_set, training_set, num_training_examples
